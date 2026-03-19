@@ -78,6 +78,29 @@
     .fbtm{border-top:1px solid rgba(255,255,255,0.07);padding-top:14px;font-size:0.7rem;text-align:center;line-height:1.7;}
     @media(max-width:860px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;}}
     @media(max-width:500px){.article{padding:20px 16px;}.nav-link{display:none;}}
+
+    /* ── POPUP ── */
+    .popup-ov{position:fixed;inset:0;background:rgba(10,22,40,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .3s;}
+    .popup-ov.open{opacity:1;pointer-events:all;}
+    .popup-box{background:var(--white);border-radius:20px;width:100%;max-width:490px;overflow:hidden;transform:translateY(28px) scale(0.97);transition:transform .35s;box-shadow:0 40px 100px rgba(0,0,0,0.4);}
+    .popup-ov.open .popup-box{transform:translateY(0) scale(1);}
+    .pop-hdr{background:linear-gradient(135deg,var(--blue),var(--blue2));padding:26px 28px;position:relative;}
+    .pop-hdr h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--white);}
+    .pop-hdr p{color:rgba(255,255,255,0.55);font-size:0.82rem;margin-top:5px;}
+    .pop-close{position:absolute;top:16px;right:16px;width:30px;height:30px;background:rgba(255,255,255,0.12);border:none;border-radius:50%;color:var(--white);font-size:0.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+    .pop-close:hover{background:rgba(255,255,255,0.2);}
+    .pop-body{padding:24px 28px;display:flex;flex-direction:column;gap:12px;}
+    .pop-f{display:flex;flex-direction:column;gap:5px;}
+    .pop-f label{font-size:0.72rem;color:var(--text2);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
+    .pop-f input,.pop-f select,.pop-f textarea{border:1.5px solid var(--border);border-radius:8px;padding:10px 12px;font-size:0.87rem;font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);outline:none;transition:border-color .2s;}
+    .pop-f input:focus,.pop-f select:focus,.pop-f textarea:focus{border-color:var(--blue);}
+    .pop-f .opt{font-size:0.62rem;color:#aab5c2;font-style:italic;text-transform:none;letter-spacing:0;}
+    .pop-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .pop-submit{background:linear-gradient(135deg,var(--blue),var(--blue2));color:var(--white);border:none;padding:12px;font-size:0.9rem;font-weight:700;border-radius:8px;cursor:pointer;width:100%;font-family:'Plus Jakarta Sans',sans-serif;transition:all .25s;}
+    .pop-submit:hover{background:linear-gradient(135deg,var(--orange),#f0a500);}
+    .float-btn{position:fixed;bottom:24px;right:24px;z-index:998;background:linear-gradient(135deg,var(--orange),#f0a500);color:white;border:none;padding:12px 18px;border-radius:100px;font-weight:700;font-size:0.82rem;cursor:pointer;box-shadow:0 6px 28px rgba(230,126,34,0.5);display:flex;align-items:center;gap:7px;font-family:'Plus Jakarta Sans',sans-serif;transition:all .25s;text-decoration:none;}
+    .float-btn:hover{transform:translateY(-2px);}
+    @media(max-width:500px){.pop-row{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -244,5 +267,92 @@
     <div class="fbtm">© 2025 CA Kunal Chhabra | Fellow Member — Institute of Chartered Accountants of India | In compliance with ICAI Code of Ethics — This page does not constitute solicitation of professional work.</div>
   </div>
 </footer>
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/919899595719" target="_blank" class="float-btn" style="bottom:80px;background:linear-gradient(135deg,#25D366,#128C7E);box-shadow:0 6px 28px rgba(37,211,102,0.5);">💬 WhatsApp</a>
+<button class="float-btn" onclick="openPopup()">📋 Free Consultation</button>
+
+<!-- POPUP OVERLAY -->
+<div class="popup-ov" id="popupOv">
+  <div class="popup-box">
+    <div class="pop-hdr">
+      <h3>Book a Free Consultation</h3>
+      <p>Fill your details — we'll call you back shortly.</p>
+      <button class="pop-close" onclick="closePopup()">✕</button>
+    </div>
+    <div class="pop-body" id="popBody">
+      <form action="https://formspree.io/f/maqppqyz" method="POST" id="popupForm">
+        <input type="hidden" name="_subject" value="New Enquiry from Blog — CA Kunal Chhabra"/>
+        <input type="text" name="_gotcha" style="display:none"/>
+        <div class="pop-f"><label>Full Name *</label><input type="text" name="name" id="p_name" placeholder="Your full name" required/></div>
+        <div class="pop-row">
+          <div class="pop-f"><label>Email *</label><input type="email" name="email" id="p_email" placeholder="your@email.com" required/></div>
+          <div class="pop-f"><label>Phone *</label><input type="tel" name="phone" id="p_phone" placeholder="+91 XXXXX XXXXX" required/></div>
+        </div>
+        <div class="pop-f">
+          <label>Requirement <span class="opt">(optional)</span></label>
+          <select name="requirement" id="p_req">
+            <option value="">— Select requirement —</option>
+            <option>GST Registration / Filing</option>
+            <option>Income Tax / ITR Filing</option>
+            <option>Private Limited Company Registration</option>
+            <option>LLP / OPC Registration</option>
+            <option>CA Certificate</option>
+            <option>MCA / ROC Compliance</option>
+            <option>Audit &amp; Assurance</option>
+            <option>Tax Planning &amp; Advisory</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="pop-submit" id="popSubmitBtn">Submit Enquiry →</button>
+        <div id="pop-success" style="display:none;margin-top:10px;background:#f0faf4;border:1px solid #27ae60;border-radius:8px;padding:12px;text-align:center;color:#1e8449;font-size:0.85rem;font-weight:600;">
+          ✅ Enquiry received! CA Kunal will contact you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── POPUP ──
+  var autoTimer = setTimeout(function() { openPopup(); }, 0);
+  function openPopup() {
+    document.getElementById('popupOv').classList.add('open');
+    clearTimeout(autoTimer);
+    document.body.style.overflow = 'hidden';
+  }
+  function closePopup() {
+    document.getElementById('popupOv').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('popupOv').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+  document.getElementById('popupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('popSubmitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        document.getElementById('pop-success').style.display = 'block';
+        document.getElementById('popupForm').reset();
+        btn.style.display = 'none';
+        setTimeout(function() { closePopup(); }, 4000);
+      } else {
+        alert('Please call us at +91 98995 95719');
+        btn.textContent = 'Submit Enquiry →';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      alert('Please call us at +91 98995 95719');
+      btn.textContent = 'Submit Enquiry →';
+      btn.disabled = false;
+    });
+  });
+</script>
 </body>
 </html>
