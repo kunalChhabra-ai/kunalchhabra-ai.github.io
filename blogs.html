@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CA Blog — GST, Income Tax, Company Registration Guides | CA Kunal Chhabra</title>
+  <meta name="description" content="200+ expert CA articles on GST, Income Tax, Company Registration, Audit and Compliance — by CA Kunal Chhabra FCA, ICAI Member."/>
+  <link rel="canonical" href="https://cakunalchhabra.com/blogs.html"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVTM0MS1ZX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SVTM0MS1ZX');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--blue:#1a5276;--blue2:#1f618d;--orange:#e67e22;--orange-light:#f0a500;--white:#fff;--cream:#f7fafc;--text:#1a2332;--text2:#4a5568;--border:#e2e8f0;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);}
+    .notice{background:#eaf4fb;border-bottom:1px solid #bee3f8;text-align:center;font-size:0.68rem;color:#2c5f7e;padding:6px 20px;font-weight:500;}
+    nav{background:var(--white);border-bottom:2px solid var(--blue);box-shadow:0 2px 16px rgba(26,82,118,0.08);position:sticky;top:0;z-index:999;}
+    .nav-inner{max-width:1260px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;}
+    .logo-area{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .logo-area img{height:52px;width:auto;}
+    .n1{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--blue);line-height:1.1;}
+    .n2{font-size:0.7rem;color:var(--orange);font-weight:600;text-transform:uppercase;letter-spacing:0.09em;margin-top:2px;}
+    .nav-right{display:flex;align-items:center;gap:14px;}
+    .nav-link{font-size:0.8rem;color:var(--text2);text-decoration:none;font-weight:500;}
+    .nav-link:hover{color:var(--blue);}
+    .nav-cta{background:var(--blue);color:white;padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:700;text-decoration:none;}
+    .nav-cta:hover{background:var(--orange);}
+    .hero{background:linear-gradient(135deg,#0d2e4a,#1a5276);padding:52px 0 44px;}
+    .hi{max-width:1260px;margin:0 auto;padding:0 24px;}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:white;margin-bottom:12px;}
+    .hero p{color:rgba(255,255,255,0.6);font-size:0.93rem;line-height:1.7;max-width:640px;margin-bottom:28px;}
+    .hstats{display:flex;gap:36px;flex-wrap:wrap;}
+    .hs{text-align:center;}
+    .hs-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--orange-light);line-height:1;}
+    .hs-l{font-size:0.67rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;}
+    .controls{background:var(--white);border-bottom:2px solid var(--border);padding:16px 0;position:sticky;top:70px;z-index:98;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+    .ci{max-width:1260px;margin:0 auto;padding:0 24px;}
+    .search-wrap{position:relative;margin-bottom:12px;}
+    .search-wrap input{width:100%;padding:12px 44px 12px 44px;border:2px solid var(--border);border-radius:10px;font-size:0.9rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border-color .2s;background:var(--cream);}
+    .search-wrap input:focus{border-color:var(--blue);background:var(--white);}
+    .search-wrap input::placeholder{color:#aab5c2;}
+    .s-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;}
+    .s-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:#e2e8f0;border:none;cursor:pointer;font-size:0.75rem;color:var(--text2);display:none;padding:4px 10px;border-radius:6px;font-family:'Plus Jakarta Sans',sans-serif;}
+    .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;}
+    .fl-label{font-size:0.72rem;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;}
+    .fbtn{background:var(--cream);border:1.5px solid var(--border);color:var(--text2);font-size:0.75rem;font-weight:500;padding:5px 13px;border-radius:100px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;white-space:nowrap;}
+    .fbtn:hover{border-color:var(--blue);color:var(--blue);}
+    .fbtn.active{background:var(--blue);border-color:var(--blue);color:white;}
+    .city-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .sel{border:1.5px solid var(--border);border-radius:8px;padding:6px 12px;font-size:0.8rem;font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);outline:none;cursor:pointer;background:var(--cream);}
+    .sel:focus{border-color:var(--blue);}
+    .blog-main{max-width:1260px;margin:0 auto;padding:28px 24px;}
+    .res-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:8px;}
+    .res-info{font-size:0.82rem;color:var(--text2);}
+    .res-info strong{color:var(--blue);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px;}
+    .card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--text);transition:all .3s;}
+    .card:hover{border-color:var(--blue);box-shadow:0 8px 36px rgba(26,82,118,0.12);transform:translateY(-3px);}
+    .c-top{background:linear-gradient(135deg,var(--blue),var(--blue2));padding:18px 20px 14px;}
+    .c-cat{display:inline-block;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);font-size:0.64rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:3px 9px;border-radius:100px;margin-bottom:7px;}
+    .c-top h2{font-family:'Cormorant Garamond',serif;font-size:0.98rem;font-weight:700;color:white;line-height:1.35;}
+    .c-body{padding:14px 18px;flex:1;display:flex;flex-direction:column;}
+    .c-meta{font-size:0.67rem;color:var(--text2);margin-bottom:7px;}
+    .c-excerpt{font-size:0.79rem;color:var(--text2);line-height:1.6;flex:1;}
+    .c-btn{display:inline-block;margin-top:12px;font-size:0.76rem;font-weight:700;color:var(--blue);background:#eaf4fb;padding:6px 12px;border-radius:6px;align-self:flex-start;transition:all .2s;}
+    .card:hover .c-btn{background:var(--blue);color:white;}
+    .empty{text-align:center;padding:60px 20px;display:none;}
+    .empty h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--blue);margin-bottom:8px;}
+    .empty p{color:var(--text2);font-size:0.85rem;margin-bottom:16px;}
+    .empty button{background:var(--blue);color:white;border:none;padding:10px 22px;border-radius:8px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;}
+    .float-wa{position:fixed;bottom:80px;right:24px;z-index:998;background:#25D366;color:white;padding:11px 18px;border-radius:100px;font-weight:700;font-size:0.81rem;box-shadow:0 6px 28px rgba(37,211,102,0.5);display:flex;align-items:center;gap:7px;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none;}
+    .float-cta{position:fixed;bottom:24px;right:24px;z-index:998;background:linear-gradient(135deg,var(--orange),var(--orange-light));color:white;border:none;padding:11px 18px;border-radius:100px;font-weight:700;font-size:0.81rem;cursor:pointer;box-shadow:0 6px 28px rgba(230,126,34,0.5);display:flex;align-items:center;gap:7px;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none;}
+    footer{background:#071320;color:rgba(255,255,255,0.45);padding:36px 0 20px;margin-top:20px;}
+    .fi{max-width:1260px;margin:0 auto;padding:0 24px;}
+    .ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:20px;}
+    .fl-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .fl-logo img{height:44px;width:auto;}
+    .flinks{display:flex;gap:16px;flex-wrap:wrap;}
+    .flinks a{font-size:0.78rem;color:rgba(255,255,255,0.45);text-decoration:none;}
+    .flinks a:hover{color:#f0a500;}
+    .fbtm{border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;font-size:0.7rem;text-align:center;}
+    @media(max-width:768px){.grid{grid-template-columns:1fr;}.hstats{gap:20px;}}
+    @media(max-width:480px){.nav-link{display:none;}}
+  </style>
+</head>
+<body>
+
+<div class="notice">⚖️ ICAI Ethics Compliance — Informational purposes only. Not solicitation of professional work.</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo-area">
+      <img src="ca-india-logo.jpg" alt="CA India Logo" onerror="this.style.display='none'"/>
+      <div><div class="n1">CA Kunal Chhabra</div><div class="n2">FCA · Online CA Services · Pan India</div></div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">← Home</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#contact" class="nav-cta">Free Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hi">
+    <h1>CA Knowledge Hub</h1>
+    <p>200+ expert articles on GST, Income Tax, Company Registration, Audit and Compliance — by CA Kunal Chhabra FCA, ICAI Member.</p>
+    <div class="hstats">
+      <div class="hs"><div class="hs-n" id="totalCount">210</div><div class="hs-l">Total Articles</div></div>
+      <div class="hs"><div class="hs-n" id="showingCount">210</div><div class="hs-l">Showing</div></div>
+      <div class="hs"><div class="hs-n">FCA</div><div class="hs-l">Expert Author</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="ci">
+    <div class="search-wrap">
+      <span class="s-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search — GST Mumbai, ITR Filing, Company Registration, Audit Bangalore..."/>
+      <button class="s-clear" id="searchClear" onclick="clearSearch()">✕ Clear</button>
+    </div>
+    <div class="filter-row">
+      <span class="fl-label">Category:</span>
+      <div id="catFilters" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+    </div>
+    <div class="city-row" style="margin-top:8px;">
+      <span class="fl-label">City:</span>
+      <select class="sel" id="cityFilter" onchange="renderCards()">
+        <option value="">All Cities</option>
+        <option>Mumbai</option><option>Delhi</option><option>Bangalore</option>
+        <option>Hyderabad</option><option>Chennai</option><option>Pune</option>
+        <option>Ahmedabad</option><option>Kolkata</option><option>Surat</option>
+        <option>Jaipur</option><option>Lucknow</option><option>Kanpur</option>
+        <option>Nagpur</option><option>Indore</option><option>Thane</option>
+        <option>Bhopal</option><option>Visakhapatnam</option><option>Patna</option>
+        <option>Vadodara</option><option>Ghaziabad</option>
+      </select>
+      <select class="sel" id="sortSelect" onchange="renderCards()">
+        <option value="default">Sort: Default</option>
+        <option value="az">A to Z</option>
+        <option value="za">Z to A</option>
+        <option value="cat">By Category</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="blog-main">
+  <div class="res-bar">
+    <div class="res-info" id="resInfo">Loading...</div>
+  </div>
+  <div class="grid" id="blogGrid"></div>
+  <div class="empty" id="emptyState">
+    <h3>No articles found</h3>
+    <p>Try different keywords, category or city.</p>
+    <button onclick="resetAll()">Reset Filters</button>
+  </div>
+</div>
+
+<a href="https://wa.me/919899595719" target="_blank" class="float-wa">💬 WhatsApp</a>
+<a href="index.html#contact" class="float-cta">📋 Free Consultation</a>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <a href="index.html" class="fl-logo">
+        <img src="ca-india-logo.jpg" alt="CA India" onerror="this.style.display='none'"/>
+        <div>
+          <div style="color:white;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;">CA Kunal Chhabra</div>
+          <div style="font-size:0.65rem;color:#f0a500;text-transform:uppercase;letter-spacing:0.08em;">FCA · Pan India Online CA Services</div>
+        </div>
+      </a>
+      <div class="flinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="gst-hsn-finder.html">GST HSN Finder</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="tel:9899595719">+91 98995 95719</a>
+      </div>
+    </div>
+    <div class="fbtm">© 2025 CA Kunal Chhabra | Fellow Member — ICAI | ICAI Ethics Compliance</div>
+  </div>
+</footer>
+
+<script>
+const BLOG_REGISTRY = [
+  {id:1,file:"blogs/pvt-ltd-registration-mumbai.html",title:"Private Limited Company Registration in Mumbai — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Mumbai online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:2,file:"blogs/pvt-ltd-registration-delhi.html",title:"Private Limited Company Registration in Delhi — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Delhi online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:3,file:"blogs/pvt-ltd-registration-bangalore.html",title:"Private Limited Company Registration in Bangalore — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Bangalore online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:4,file:"blogs/pvt-ltd-registration-hyderabad.html",title:"Private Limited Company Registration in Hyderabad — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Hyderabad online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:5,file:"blogs/pvt-ltd-registration-chennai.html",title:"Private Limited Company Registration in Chennai — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Chennai online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:6,file:"blogs/pvt-ltd-registration-pune.html",title:"Private Limited Company Registration in Pune — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Pune online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:7,file:"blogs/pvt-ltd-registration-ahmedabad.html",title:"Private Limited Company Registration in Ahmedabad — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Ahmedabad online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:8,file:"blogs/pvt-ltd-registration-kolkata.html",title:"Private Limited Company Registration in Kolkata — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Kolkata online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:9,file:"blogs/pvt-ltd-registration-surat.html",title:"Private Limited Company Registration in Surat — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Surat online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:10,file:"blogs/pvt-ltd-registration-jaipur.html",title:"Private Limited Company Registration in Jaipur — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Jaipur online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:11,file:"blogs/pvt-ltd-registration-lucknow.html",title:"Private Limited Company Registration in Lucknow — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Lucknow online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:12,file:"blogs/pvt-ltd-registration-kanpur.html",title:"Private Limited Company Registration in Kanpur — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Kanpur online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:13,file:"blogs/pvt-ltd-registration-nagpur.html",title:"Private Limited Company Registration in Nagpur — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Nagpur online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:14,file:"blogs/pvt-ltd-registration-indore.html",title:"Private Limited Company Registration in Indore — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Indore online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:15,file:"blogs/pvt-ltd-registration-thane.html",title:"Private Limited Company Registration in Thane — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Thane online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:16,file:"blogs/pvt-ltd-registration-bhopal.html",title:"Private Limited Company Registration in Bhopal — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Bhopal online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:17,file:"blogs/pvt-ltd-registration-visakhapatnam.html",title:"Private Limited Company Registration in Visakhapatnam — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Visakhapatnam online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:18,file:"blogs/pvt-ltd-registration-patna.html",title:"Private Limited Company Registration in Patna — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Patna online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:19,file:"blogs/pvt-ltd-registration-vadodara.html",title:"Private Limited Company Registration in Vadodara — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Vadodara online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:20,file:"blogs/pvt-ltd-registration-ghaziabad.html",title:"Private Limited Company Registration in Ghaziabad — Online CA Service 2025",category:"Company Registration",date:"March 2025",readTime:"7 min read",excerpt:"Register a Private Limited Company in Ghaziabad online with CA Kunal Chhabra. Expert CA guidance, transparent pricing, fast turnaround. 100% online service from anywhere in India."},
+  {id:21,file:"blogs/llp-registration-mumbai.html",title:"LLP Registration in Mumbai — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Mumbai online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Mumbai — 100% digital, pan India."},
+  {id:22,file:"blogs/llp-registration-delhi.html",title:"LLP Registration in Delhi — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Delhi online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Delhi — 100% digital, pan India."},
+  {id:23,file:"blogs/llp-registration-bangalore.html",title:"LLP Registration in Bangalore — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Bangalore online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Bangalore — 100% digital, pan India."},
+  {id:24,file:"blogs/llp-registration-hyderabad.html",title:"LLP Registration in Hyderabad — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Hyderabad online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Hyderabad — 100% digital, pan India."},
+  {id:25,file:"blogs/llp-registration-chennai.html",title:"LLP Registration in Chennai — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Chennai online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Chennai — 100% digital, pan India."},
+  {id:26,file:"blogs/llp-registration-pune.html",title:"LLP Registration in Pune — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Pune online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Pune — 100% digital, pan India."},
+  {id:27,file:"blogs/llp-registration-ahmedabad.html",title:"LLP Registration in Ahmedabad — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Ahmedabad online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Ahmedabad — 100% digital, pan India."},
+  {id:28,file:"blogs/llp-registration-kolkata.html",title:"LLP Registration in Kolkata — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Kolkata online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Kolkata — 100% digital, pan India."},
+  {id:29,file:"blogs/llp-registration-surat.html",title:"LLP Registration in Surat — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Surat online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Surat — 100% digital, pan India."},
+  {id:30,file:"blogs/llp-registration-jaipur.html",title:"LLP Registration in Jaipur — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Jaipur online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Jaipur — 100% digital, pan India."},
+  {id:31,file:"blogs/llp-registration-lucknow.html",title:"LLP Registration in Lucknow — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Lucknow online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Lucknow — 100% digital, pan India."},
+  {id:32,file:"blogs/llp-registration-kanpur.html",title:"LLP Registration in Kanpur — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Kanpur online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Kanpur — 100% digital, pan India."},
+  {id:33,file:"blogs/llp-registration-nagpur.html",title:"LLP Registration in Nagpur — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Nagpur online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Nagpur — 100% digital, pan India."},
+  {id:34,file:"blogs/llp-registration-indore.html",title:"LLP Registration in Indore — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Indore online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Indore — 100% digital, pan India."},
+  {id:35,file:"blogs/llp-registration-thane.html",title:"LLP Registration in Thane — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Thane online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Thane — 100% digital, pan India."},
+  {id:36,file:"blogs/llp-registration-bhopal.html",title:"LLP Registration in Bhopal — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Bhopal online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Bhopal — 100% digital, pan India."},
+  {id:37,file:"blogs/llp-registration-visakhapatnam.html",title:"LLP Registration in Visakhapatnam — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Visakhapatnam online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Visakhapatnam — 100% digital, pan India."},
+  {id:38,file:"blogs/llp-registration-patna.html",title:"LLP Registration in Patna — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Patna online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Patna — 100% digital, pan India."},
+  {id:39,file:"blogs/llp-registration-vadodara.html",title:"LLP Registration in Vadodara — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Vadodara online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Vadodara — 100% digital, pan India."},
+  {id:40,file:"blogs/llp-registration-ghaziabad.html",title:"LLP Registration in Ghaziabad — Limited Liability Partnership Formation 2025",category:"Company Registration",date:"March 2025",readTime:"6 min read",excerpt:"Register an LLP in Ghaziabad online. CA Kunal Chhabra provides complete LLP formation services for professionals and businesses in Ghaziabad — 100% digital, pan India."},
+  {id:41,file:"blogs/gst-registration-mumbai.html",title:"GST Registration in Mumbai — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Mumbai? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Mumbai. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:42,file:"blogs/gst-registration-delhi.html",title:"GST Registration in Delhi — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Delhi? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Delhi. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:43,file:"blogs/gst-registration-bangalore.html",title:"GST Registration in Bangalore — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Bangalore? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Bangalore. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:44,file:"blogs/gst-registration-hyderabad.html",title:"GST Registration in Hyderabad — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Hyderabad? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Hyderabad. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:45,file:"blogs/gst-registration-chennai.html",title:"GST Registration in Chennai — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Chennai? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Chennai. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:46,file:"blogs/gst-registration-pune.html",title:"GST Registration in Pune — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Pune? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Pune. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:47,file:"blogs/gst-registration-ahmedabad.html",title:"GST Registration in Ahmedabad — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Ahmedabad? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Ahmedabad. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:48,file:"blogs/gst-registration-kolkata.html",title:"GST Registration in Kolkata — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Kolkata? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Kolkata. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:49,file:"blogs/gst-registration-surat.html",title:"GST Registration in Surat — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Surat? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Surat. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:50,file:"blogs/gst-registration-jaipur.html",title:"GST Registration in Jaipur — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Jaipur? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Jaipur. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:51,file:"blogs/gst-registration-lucknow.html",title:"GST Registration in Lucknow — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Lucknow? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Lucknow. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:52,file:"blogs/gst-registration-kanpur.html",title:"GST Registration in Kanpur — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Kanpur? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Kanpur. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:53,file:"blogs/gst-registration-nagpur.html",title:"GST Registration in Nagpur — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Nagpur? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Nagpur. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:54,file:"blogs/gst-registration-indore.html",title:"GST Registration in Indore — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Indore? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Indore. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:55,file:"blogs/gst-registration-thane.html",title:"GST Registration in Thane — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Thane? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Thane. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:56,file:"blogs/gst-registration-bhopal.html",title:"GST Registration in Bhopal — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Bhopal? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Bhopal. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:57,file:"blogs/gst-registration-visakhapatnam.html",title:"GST Registration in Visakhapatnam — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Visakhapatnam? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Visakhapatnam. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:58,file:"blogs/gst-registration-patna.html",title:"GST Registration in Patna — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Patna? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Patna. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:59,file:"blogs/gst-registration-vadodara.html",title:"GST Registration in Vadodara — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Vadodara? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Vadodara. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:60,file:"blogs/gst-registration-ghaziabad.html",title:"GST Registration in Ghaziabad — Get GSTIN Online in 3-7 Days",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Need GST registration in Ghaziabad? CA Kunal Chhabra provides fast, accurate GST registration services for businesses in Ghaziabad. Get your GSTIN in 3-7 working days — 100% online."},
+  {id:61,file:"blogs/gst-return-filing-mumbai.html",title:"GST Return Filing in Mumbai — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Mumbai? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Mumbai — accurate, timely, and 100% online."},
+  {id:62,file:"blogs/gst-return-filing-delhi.html",title:"GST Return Filing in Delhi — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Delhi? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Delhi — accurate, timely, and 100% online."},
+  {id:63,file:"blogs/gst-return-filing-bangalore.html",title:"GST Return Filing in Bangalore — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Bangalore? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Bangalore — accurate, timely, and 100% online."},
+  {id:64,file:"blogs/gst-return-filing-hyderabad.html",title:"GST Return Filing in Hyderabad — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Hyderabad? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Hyderabad — accurate, timely, and 100% online."},
+  {id:65,file:"blogs/gst-return-filing-chennai.html",title:"GST Return Filing in Chennai — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Chennai? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Chennai — accurate, timely, and 100% online."},
+  {id:66,file:"blogs/gst-return-filing-pune.html",title:"GST Return Filing in Pune — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Pune? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Pune — accurate, timely, and 100% online."},
+  {id:67,file:"blogs/gst-return-filing-ahmedabad.html",title:"GST Return Filing in Ahmedabad — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Ahmedabad? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Ahmedabad — accurate, timely, and 100% online."},
+  {id:68,file:"blogs/gst-return-filing-kolkata.html",title:"GST Return Filing in Kolkata — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Kolkata? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Kolkata — accurate, timely, and 100% online."},
+  {id:69,file:"blogs/gst-return-filing-surat.html",title:"GST Return Filing in Surat — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Surat? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Surat — accurate, timely, and 100% online."},
+  {id:70,file:"blogs/gst-return-filing-jaipur.html",title:"GST Return Filing in Jaipur — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Jaipur? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Jaipur — accurate, timely, and 100% online."},
+  {id:71,file:"blogs/gst-return-filing-lucknow.html",title:"GST Return Filing in Lucknow — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Lucknow? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Lucknow — accurate, timely, and 100% online."},
+  {id:72,file:"blogs/gst-return-filing-kanpur.html",title:"GST Return Filing in Kanpur — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Kanpur? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Kanpur — accurate, timely, and 100% online."},
+  {id:73,file:"blogs/gst-return-filing-nagpur.html",title:"GST Return Filing in Nagpur — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Nagpur? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Nagpur — accurate, timely, and 100% online."},
+  {id:74,file:"blogs/gst-return-filing-indore.html",title:"GST Return Filing in Indore — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Indore? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Indore — accurate, timely, and 100% online."},
+  {id:75,file:"blogs/gst-return-filing-thane.html",title:"GST Return Filing in Thane — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Thane? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Thane — accurate, timely, and 100% online."},
+  {id:76,file:"blogs/gst-return-filing-bhopal.html",title:"GST Return Filing in Bhopal — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Bhopal? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Bhopal — accurate, timely, and 100% online."},
+  {id:77,file:"blogs/gst-return-filing-visakhapatnam.html",title:"GST Return Filing in Visakhapatnam — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Visakhapatnam? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Visakhapatnam — accurate, timely, and 100% online."},
+  {id:78,file:"blogs/gst-return-filing-patna.html",title:"GST Return Filing in Patna — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Patna? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Patna — accurate, timely, and 100% online."},
+  {id:79,file:"blogs/gst-return-filing-vadodara.html",title:"GST Return Filing in Vadodara — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Vadodara? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Vadodara — accurate, timely, and 100% online."},
+  {id:80,file:"blogs/gst-return-filing-ghaziabad.html",title:"GST Return Filing in Ghaziabad — Monthly & Annual GSTR Filing by CA",category:"GST",date:"March 2025",readTime:"5 min read",excerpt:"Looking for a CA to file GST returns in Ghaziabad? CA Kunal Chhabra handles GSTR-1, GSTR-3B, GSTR-9 filing for businesses in Ghaziabad — accurate, timely, and 100% online."},
+  {id:81,file:"blogs/itr-filing-mumbai.html",title:"Income Tax Return Filing in Mumbai — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Mumbai with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:82,file:"blogs/itr-filing-delhi.html",title:"Income Tax Return Filing in Delhi — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Delhi with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:83,file:"blogs/itr-filing-bangalore.html",title:"Income Tax Return Filing in Bangalore — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Bangalore with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:84,file:"blogs/itr-filing-hyderabad.html",title:"Income Tax Return Filing in Hyderabad — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Hyderabad with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:85,file:"blogs/itr-filing-chennai.html",title:"Income Tax Return Filing in Chennai — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Chennai with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:86,file:"blogs/itr-filing-pune.html",title:"Income Tax Return Filing in Pune — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Pune with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:87,file:"blogs/itr-filing-ahmedabad.html",title:"Income Tax Return Filing in Ahmedabad — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Ahmedabad with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:88,file:"blogs/itr-filing-kolkata.html",title:"Income Tax Return Filing in Kolkata — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Kolkata with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:89,file:"blogs/itr-filing-surat.html",title:"Income Tax Return Filing in Surat — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Surat with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:90,file:"blogs/itr-filing-jaipur.html",title:"Income Tax Return Filing in Jaipur — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Jaipur with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:91,file:"blogs/itr-filing-lucknow.html",title:"Income Tax Return Filing in Lucknow — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Lucknow with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:92,file:"blogs/itr-filing-kanpur.html",title:"Income Tax Return Filing in Kanpur — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Kanpur with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:93,file:"blogs/itr-filing-nagpur.html",title:"Income Tax Return Filing in Nagpur — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Nagpur with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:94,file:"blogs/itr-filing-indore.html",title:"Income Tax Return Filing in Indore — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Indore with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:95,file:"blogs/itr-filing-thane.html",title:"Income Tax Return Filing in Thane — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Thane with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:96,file:"blogs/itr-filing-bhopal.html",title:"Income Tax Return Filing in Bhopal — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Bhopal with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:97,file:"blogs/itr-filing-visakhapatnam.html",title:"Income Tax Return Filing in Visakhapatnam — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Visakhapatnam with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:98,file:"blogs/itr-filing-patna.html",title:"Income Tax Return Filing in Patna — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Patna with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:99,file:"blogs/itr-filing-vadodara.html",title:"Income Tax Return Filing in Vadodara — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Vadodara with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:100,file:"blogs/itr-filing-ghaziabad.html",title:"Income Tax Return Filing in Ghaziabad — All ITR Forms, Expert CA Service",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"File your Income Tax Return (ITR) in Ghaziabad with CA Kunal Chhabra. All ITR forms covered — salaried, business, capital gains. Accurate filing, maximum tax savings, 100% online."},
+  {id:101,file:"blogs/tds-return-filing-mumbai.html",title:"TDS Return Filing in Mumbai — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Mumbai by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Mumbai — 100% online."},
+  {id:102,file:"blogs/tds-return-filing-delhi.html",title:"TDS Return Filing in Delhi — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Delhi by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Delhi — 100% online."},
+  {id:103,file:"blogs/tds-return-filing-bangalore.html",title:"TDS Return Filing in Bangalore — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Bangalore by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Bangalore — 100% online."},
+  {id:104,file:"blogs/tds-return-filing-hyderabad.html",title:"TDS Return Filing in Hyderabad — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Hyderabad by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Hyderabad — 100% online."},
+  {id:105,file:"blogs/tds-return-filing-chennai.html",title:"TDS Return Filing in Chennai — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Chennai by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Chennai — 100% online."},
+  {id:106,file:"blogs/tds-return-filing-pune.html",title:"TDS Return Filing in Pune — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Pune by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Pune — 100% online."},
+  {id:107,file:"blogs/tds-return-filing-ahmedabad.html",title:"TDS Return Filing in Ahmedabad — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Ahmedabad by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Ahmedabad — 100% online."},
+  {id:108,file:"blogs/tds-return-filing-kolkata.html",title:"TDS Return Filing in Kolkata — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Kolkata by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Kolkata — 100% online."},
+  {id:109,file:"blogs/tds-return-filing-surat.html",title:"TDS Return Filing in Surat — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Surat by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Surat — 100% online."},
+  {id:110,file:"blogs/tds-return-filing-jaipur.html",title:"TDS Return Filing in Jaipur — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Jaipur by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Jaipur — 100% online."},
+  {id:111,file:"blogs/tds-return-filing-lucknow.html",title:"TDS Return Filing in Lucknow — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Lucknow by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Lucknow — 100% online."},
+  {id:112,file:"blogs/tds-return-filing-kanpur.html",title:"TDS Return Filing in Kanpur — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Kanpur by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Kanpur — 100% online."},
+  {id:113,file:"blogs/tds-return-filing-nagpur.html",title:"TDS Return Filing in Nagpur — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Nagpur by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Nagpur — 100% online."},
+  {id:114,file:"blogs/tds-return-filing-indore.html",title:"TDS Return Filing in Indore — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Indore by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Indore — 100% online."},
+  {id:115,file:"blogs/tds-return-filing-thane.html",title:"TDS Return Filing in Thane — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Thane by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Thane — 100% online."},
+  {id:116,file:"blogs/tds-return-filing-bhopal.html",title:"TDS Return Filing in Bhopal — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Bhopal by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Bhopal — 100% online."},
+  {id:117,file:"blogs/tds-return-filing-visakhapatnam.html",title:"TDS Return Filing in Visakhapatnam — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Visakhapatnam by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Visakhapatnam — 100% online."},
+  {id:118,file:"blogs/tds-return-filing-patna.html",title:"TDS Return Filing in Patna — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Patna by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Patna — 100% online."},
+  {id:119,file:"blogs/tds-return-filing-vadodara.html",title:"TDS Return Filing in Vadodara — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Vadodara by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Vadodara — 100% online."},
+  {id:120,file:"blogs/tds-return-filing-ghaziabad.html",title:"TDS Return Filing in Ghaziabad — Quarterly TDS Compliance by CA",category:"Income Tax",date:"March 2025",readTime:"5 min read",excerpt:"Accurate and timely TDS return filing in Ghaziabad by CA Kunal Chhabra. Form 24Q, 26Q, 27Q quarterly filing for businesses and individuals in Ghaziabad — 100% online."},
+  {id:121,file:"blogs/networth-certificate.html",title:"Networth Certificate — for Bank Loans & Visa Applications | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Networth Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:122,file:"blogs/solvency-certificate.html",title:"Solvency Certificate — for Tenders, Courts & Banks | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Solvency Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:123,file:"blogs/turnover-certificate.html",title:"Turnover Certificate — for MSME, Tenders & Government | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Turnover Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:124,file:"blogs/ca-certificate-visa.html",title:"CA Certificate for Visa — Income & Net Assets Certificate for Embassy | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a CA Certificate for Visa from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:125,file:"blogs/dscr-certificate.html",title:"DSCR Certificate — Debt Service Coverage Ratio Certificate | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a DSCR Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:126,file:"blogs/projected-financials-certificate.html",title:"Projected Financials Certificate — for Bank Loans & Startups | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Projected Financials Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:127,file:"blogs/working-capital-certificate.html",title:"Working Capital Certificate — for Banks & NBFCs | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Working Capital Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:128,file:"blogs/form-15cb-certificate.html",title:"Form 15CB Certificate — Foreign Remittance Under FEMA | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Form 15CB Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:129,file:"blogs/msme-investment-certificate.html",title:"MSME Investment Certificate — Plant & Machinery for MSME Registration | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a MSME Investment Certificate from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:130,file:"blogs/utilization-certificate-ngo.html",title:"Utilization Certificate for NGO — Govt Grant & CSR Fund Utilization | CA Kunal Chhabra",category:"CA Certificates",date:"March 2025",readTime:"4 min read",excerpt:"Get a Utilization Certificate for NGO from CA Kunal Chhabra — ICAI-compliant, digitally signed, accepted by all banks, embassies, courts and regulatory bodies across India. Fast online delivery."},
+  {id:131,file:"blogs/mca-compliance-mumbai.html",title:"MCA Annual Compliance in Mumbai — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Mumbai. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Mumbai — 100% online."},
+  {id:132,file:"blogs/mca-compliance-delhi.html",title:"MCA Annual Compliance in Delhi — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Delhi. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Delhi — 100% online."},
+  {id:133,file:"blogs/mca-compliance-bangalore.html",title:"MCA Annual Compliance in Bangalore — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Bangalore. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Bangalore — 100% online."},
+  {id:134,file:"blogs/mca-compliance-hyderabad.html",title:"MCA Annual Compliance in Hyderabad — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Hyderabad. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Hyderabad — 100% online."},
+  {id:135,file:"blogs/mca-compliance-chennai.html",title:"MCA Annual Compliance in Chennai — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Chennai. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Chennai — 100% online."},
+  {id:136,file:"blogs/mca-compliance-pune.html",title:"MCA Annual Compliance in Pune — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Pune. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Pune — 100% online."},
+  {id:137,file:"blogs/mca-compliance-ahmedabad.html",title:"MCA Annual Compliance in Ahmedabad — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Ahmedabad. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Ahmedabad — 100% online."},
+  {id:138,file:"blogs/mca-compliance-kolkata.html",title:"MCA Annual Compliance in Kolkata — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Kolkata. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Kolkata — 100% online."},
+  {id:139,file:"blogs/mca-compliance-surat.html",title:"MCA Annual Compliance in Surat — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Surat. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Surat — 100% online."},
+  {id:140,file:"blogs/mca-compliance-jaipur.html",title:"MCA Annual Compliance in Jaipur — ROC Filing, MGT-7, AOC-4 by CA",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Avoid hefty MCA penalties with timely ROC annual filings in Jaipur. CA Kunal Chhabra handles MGT-7, AOC-4, DIN KYC and all MCA compliance for companies in Jaipur — 100% online."},
+  {id:141,file:"blogs/director-kyc-din.html",title:"Director KYC & DIN eKYC Filing — Annual DIN KYC for Directors | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Director KYC & DIN eKYC Filing in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:142,file:"blogs/share-transfer-company.html",title:"Share Transfer in Private Limited Company — Process & Documents | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Share Transfer in Private Limited Company in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:143,file:"blogs/moa-aoa-amendment.html",title:"MOA & AOA Amendment — How to Change Objects of Company | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to MOA & AOA Amendment in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:144,file:"blogs/company-name-change.html",title:"Company Name Change Procedure — RUN Application & MCA Process | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Company Name Change Procedure in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:145,file:"blogs/increase-authorized-capital.html",title:"How to Increase Authorized Share Capital — MCA Filing Process | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to How to Increase Authorized Share Capital in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:146,file:"blogs/company-winding-up.html",title:"Company Winding Up Process in India — Voluntary Strike Off & Closure | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Company Winding Up Process in India in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:147,file:"blogs/llp-annual-compliance.html",title:"LLP Annual Compliance — Form 11, Form 8 Filing Guide | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to LLP Annual Compliance in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:148,file:"blogs/opc-compliance.html",title:"OPC Annual Compliance — One Person Company Filing Requirements | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to OPC Annual Compliance in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:149,file:"blogs/dormant-company-status.html",title:"Dormant Company Status Filing — INC-22A & STK-2 Process | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Dormant Company Status Filing in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:150,file:"blogs/adt1-auditor-appointment.html",title:"ADT-1 Auditor Appointment Filing — MCA Form & Process | CA Kunal Chhabra",category:"MCA Compliance",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to ADT-1 Auditor Appointment Filing in India. CA Kunal Chhabra handles all MCA filings online — accurate, timely, and fully compliant with Companies Act 2013."},
+  {id:151,file:"blogs/audit-services-mumbai.html",title:"Statutory Audit Services in Mumbai — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Mumbai by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Mumbai."},
+  {id:152,file:"blogs/audit-services-delhi.html",title:"Statutory Audit Services in Delhi — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Delhi by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Delhi."},
+  {id:153,file:"blogs/audit-services-bangalore.html",title:"Statutory Audit Services in Bangalore — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Bangalore by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Bangalore."},
+  {id:154,file:"blogs/audit-services-hyderabad.html",title:"Statutory Audit Services in Hyderabad — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Hyderabad by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Hyderabad."},
+  {id:155,file:"blogs/audit-services-chennai.html",title:"Statutory Audit Services in Chennai — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Chennai by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Chennai."},
+  {id:156,file:"blogs/audit-services-pune.html",title:"Statutory Audit Services in Pune — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Pune by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Pune."},
+  {id:157,file:"blogs/audit-services-ahmedabad.html",title:"Statutory Audit Services in Ahmedabad — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Ahmedabad by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Ahmedabad."},
+  {id:158,file:"blogs/audit-services-kolkata.html",title:"Statutory Audit Services in Kolkata — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Kolkata by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Kolkata."},
+  {id:159,file:"blogs/audit-services-surat.html",title:"Statutory Audit Services in Surat — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Surat by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Surat."},
+  {id:160,file:"blogs/audit-services-jaipur.html",title:"Statutory Audit Services in Jaipur — Tax Audit & Internal Audit by CA",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Professional statutory audit, tax audit and internal audit services in Jaipur by CA Kunal Chhabra — ICAI Fellow Member. Online audit for all company types in Jaipur."},
+  {id:161,file:"blogs/tax-audit-section-44ab.html",title:"Tax Audit Under Section 44AB — Who Needs It & How It Works | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Tax Audit Under Section 44AB services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:162,file:"blogs/internal-audit-guide.html",title:"Internal Audit for Companies — Process, Scope & Benefits | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Internal Audit for Companies services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:163,file:"blogs/stock-audit-guide.html",title:"Stock Audit Services — For Banks, NBFCs & Corporates | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Stock Audit Services services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:164,file:"blogs/due-diligence-services.html",title:"Due Diligence Services — Financial & Legal Due Diligence | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Due Diligence Services services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:165,file:"blogs/statutory-audit-pvt-ltd.html",title:"Statutory Audit for Private Limited Company — Complete Guide | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Statutory Audit for Private Limited Company services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:166,file:"blogs/ngo-trust-audit.html",title:"Audit for NGO & Trust — Form 10B & Income Tax Audit | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Audit for NGO & Trust services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:167,file:"blogs/nbfc-audit-services.html",title:"NBFC Audit Services — RBI Compliance & Statutory Audit | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert NBFC Audit Services services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:168,file:"blogs/bank-audit-concurrent.html",title:"Bank Concurrent Audit — Scope, Process & Reporting | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Bank Concurrent Audit services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:169,file:"blogs/gst-audit-annual-return.html",title:"GST Audit & Annual Return — GSTR-9 & GSTR-9C Filing | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert GST Audit & Annual Return services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:170,file:"blogs/msme-audit-services.html",title:"Audit Services for MSME — Who Needs Audit & Process | CA Kunal Chhabra",category:"Audit",date:"March 2025",readTime:"5 min read",excerpt:"Expert Audit Services for MSME services by CA Kunal Chhabra, FCA — ICAI member. Professional, independent, and compliant audit services delivered online across India."},
+  {id:171,file:"blogs/startup-india-dpiit-benefits.html",title:"Startup India DPIIT Benefits — Tax Holiday, Angel Tax Exemption & More | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Startup India DPIIT Benefits in India. CA Kunal Chhabra provides expert assistance for startup india dpiit benefits — 100% online, pan India service with full documentation support."},
+  {id:172,file:"blogs/msme-udyam-registration-guide.html",title:"MSME Udyam Registration — Benefits, Eligibility & Process 2025 | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to MSME Udyam Registration in India. CA Kunal Chhabra provides expert assistance for msme udyam registration — 100% online, pan India service with full documentation support."},
+  {id:173,file:"blogs/fssai-registration-guide.html",title:"FSSAI Registration & License — Food Business Registration India | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to FSSAI Registration & License in India. CA Kunal Chhabra provides expert assistance for fssai registration & license — 100% online, pan India service with full documentation support."},
+  {id:174,file:"blogs/import-export-code-iec.html",title:"Import Export Code (IEC) Registration — Online Process & Documents | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Import Export Code (IEC) Registration in India. CA Kunal Chhabra provides expert assistance for import export code (iec) registration — 100% online, pan India service with full documentation support."},
+  {id:175,file:"blogs/12a-80g-registration-ngo.html",title:"12A & 80G Registration for NGO — Income Tax Exemption Guide | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to 12A & 80G Registration for NGO in India. CA Kunal Chhabra provides expert assistance for 12a & 80g registration for ngo — 100% online, pan India service with full documentation support."},
+  {id:176,file:"blogs/section-8-company-ngo.html",title:"Section 8 Company Registration — NGO & Non-Profit Setup Guide | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Section 8 Company Registration in India. CA Kunal Chhabra provides expert assistance for section 8 company registration — 100% online, pan India service with full documentation support."},
+  {id:177,file:"blogs/trust-registration-india.html",title:"Trust Registration in India — Process, Documents & Compliance | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Trust Registration in India in India. CA Kunal Chhabra provides expert assistance for trust registration in india — 100% online, pan India service with full documentation support."},
+  {id:178,file:"blogs/digital-signature-dsc.html",title:"Digital Signature Certificate (DSC) — How to Apply & Types | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Digital Signature Certificate (DSC) in India. CA Kunal Chhabra provides expert assistance for digital signature certificate (dsc) — 100% online, pan India service with full documentation support."},
+  {id:179,file:"blogs/iso-certification-guide.html",title:"ISO Certification in India — Process, Types & Benefits | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to ISO Certification in India in India. CA Kunal Chhabra provides expert assistance for iso certification in india — 100% online, pan India service with full documentation support."},
+  {id:180,file:"blogs/shop-establishment-registration.html",title:"Shop & Establishment Registration — State-wise Process Guide | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Shop & Establishment Registration in India. CA Kunal Chhabra provides expert assistance for shop & establishment registration — 100% online, pan India service with full documentation support."},
+  {id:181,file:"blogs/professional-tax-registration.html",title:"Professional Tax Registration — State-wise Applicability & Process | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Professional Tax Registration in India. CA Kunal Chhabra provides expert assistance for professional tax registration — 100% online, pan India service with full documentation support."},
+  {id:182,file:"blogs/pf-esic-registration.html",title:"PF & ESIC Registration — Employee Benefits Compliance Guide | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to PF & ESIC Registration in India. CA Kunal Chhabra provides expert assistance for pf & esic registration — 100% online, pan India service with full documentation support."},
+  {id:183,file:"blogs/trade-license-india.html",title:"Trade License Registration — Municipal License for Business | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Trade License Registration in India. CA Kunal Chhabra provides expert assistance for trade license registration — 100% online, pan India service with full documentation support."},
+  {id:184,file:"blogs/fcra-registration-ngo.html",title:"FCRA Registration for NGO — Receive Foreign Funding Legally | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to FCRA Registration for NGO in India. CA Kunal Chhabra provides expert assistance for fcra registration for ngo — 100% online, pan India service with full documentation support."},
+  {id:185,file:"blogs/tan-registration-guide.html",title:"TAN Registration & Application — Tax Deduction Account Number Guide | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to TAN Registration & Application in India. CA Kunal Chhabra provides expert assistance for tan registration & application — 100% online, pan India service with full documentation support."},
+  {id:186,file:"blogs/pan-card-company.html",title:"PAN Card for Company & LLP — Application Process & Documents | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to PAN Card for Company & LLP in India. CA Kunal Chhabra provides expert assistance for pan card for company & llp — 100% online, pan India service with full documentation support."},
+  {id:187,file:"blogs/trademark-registration-india.html",title:"Trademark Registration in India — Process, Classes & Protection | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Trademark Registration in India in India. CA Kunal Chhabra provides expert assistance for trademark registration in india — 100% online, pan India service with full documentation support."},
+  {id:188,file:"blogs/gst-composition-scheme.html",title:"GST Composition Scheme — Eligibility, Rates & How to Opt | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to GST Composition Scheme in India. CA Kunal Chhabra provides expert assistance for gst composition scheme — 100% online, pan India service with full documentation support."},
+  {id:189,file:"blogs/one-person-company-opc.html",title:"One Person Company Registration — Complete Guide for Solo Entrepreneurs | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to One Person Company Registration in India. CA Kunal Chhabra provides expert assistance for one person company registration — 100% online, pan India service with full documentation support."},
+  {id:190,file:"blogs/partnership-firm-registration.html",title:"Partnership Firm Registration — Process, Documents & Deed | CA Kunal Chhabra",category:"Registrations",date:"March 2025",readTime:"5 min read",excerpt:"Complete guide to Partnership Firm Registration in India. CA Kunal Chhabra provides expert assistance for partnership firm registration — 100% online, pan India service with full documentation support."},
+  {id:191,file:"blogs/income-tax-saving-tips-salaried.html",title:"Income Tax Saving Tips for Salaried Employees — FY 2024-25 Guide | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Income Tax Saving Tips for Salaried Employees by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:192,file:"blogs/new-vs-old-tax-regime-2025.html",title:"New vs Old Tax Regime 2025 — Which One Saves More Tax? | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on New vs Old Tax Regime 2025 by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:193,file:"blogs/tax-planning-business-india.html",title:"Tax Planning for Business Owners — Legal Ways to Reduce Tax | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Tax Planning for Business Owners by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:194,file:"blogs/advance-tax-calculation.html",title:"Advance Tax Calculation & Payment — Who Pays & How to Calculate | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Advance Tax Calculation & Payment by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:195,file:"blogs/capital-gains-tax-india.html",title:"Capital Gains Tax in India — Short Term vs Long Term & Exemptions | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Capital Gains Tax in India by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:196,file:"blogs/home-loan-tax-benefits.html",title:"Home Loan Tax Benefits — Section 24, 80C & 80EE Deductions | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Home Loan Tax Benefits by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:197,file:"blogs/hra-exemption-calculation.html",title:"HRA Exemption Calculation — How to Claim House Rent Allowance | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on HRA Exemption Calculation by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:198,file:"blogs/80c-deductions-guide.html",title:"Section 80C Deductions Guide — ₹1.5 Lakh Tax Saving Investments | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Section 80C Deductions Guide by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:199,file:"blogs/nri-tax-filing-india.html",title:"NRI Income Tax Filing in India — FEMA, DTAA & ITR for NRIs | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on NRI Income Tax Filing in India by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:200,file:"blogs/freelancer-tax-guide.html",title:"Income Tax for Freelancers & Consultants — ITR-4 & Section 44ADA | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Income Tax for Freelancers & Consultants by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:201,file:"blogs/startup-funding-tax-implications.html",title:"Startup Funding & Tax Implications — Angel Tax, ESOP & More | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Startup Funding & Tax Implications by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:202,file:"blogs/gst-input-tax-credit-guide.html",title:"GST Input Tax Credit (ITC) — How to Claim & Reconcile | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on GST Input Tax Credit (ITC) by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:203,file:"blogs/gst-e-invoicing-guide.html",title:"GST E-Invoicing Guide — Who Needs It & How to Generate | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on GST E-Invoicing Guide by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:204,file:"blogs/gst-notice-reply-guide.html",title:"How to Reply to a GST Notice — Types of Notices & Response Strategy | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on How to Reply to a GST Notice by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:205,file:"blogs/income-tax-notice-guide.html",title:"How to Respond to Income Tax Notice — 143(1), 148, 139(9) Explained | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on How to Respond to Income Tax Notice by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:206,file:"blogs/presumptive-taxation-44ad.html",title:"Presumptive Taxation Under 44AD & 44ADA — For Small Businesses | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Presumptive Taxation Under 44AD & 44ADA by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:207,file:"blogs/crypto-tax-india-2025.html",title:"Cryptocurrency Tax in India 2025 — 30% Tax, TDS & ITR Reporting | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Cryptocurrency Tax in India 2025 by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:208,file:"blogs/gst-reverse-charge-mechanism.html",title:"GST Reverse Charge Mechanism (RCM) — Applicability & Compliance | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on GST Reverse Charge Mechanism (RCM) by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:209,file:"blogs/tds-on-property-purchase.html",title:"TDS on Property Purchase in India — Section 194-IA Guide | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on TDS on Property Purchase in India by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."},
+  {id:210,file:"blogs/professional-tax-india.html",title:"Professional Tax in India — State-wise Rates & Compliance | CA Kunal Chhabra",category:"Tax Advisory",date:"March 2025",readTime:"6 min read",excerpt:"Expert guide on Professional Tax in India by CA Kunal Chhabra FCA. Practical, actionable advice to help businesses and individuals in India navigate taxation and compliance effectively."}
+];
+
+// ── STATE ──
+var activeCategory = 'All';
+var searchTerm = '';
+
+// ── INIT ──
+function init() {
+  // Set total count
+  document.getElementById('totalCount').textContent = BLOG_REGISTRY.length;
+
+  // Build category filter buttons
+  var cats = ['All'];
+  var seen = {};
+  for (var i = 0; i < BLOG_REGISTRY.length; i++) {
+    var cat = BLOG_REGISTRY[i].category;
+    if (!seen[cat]) { seen[cat] = true; cats.push(cat); }
+  }
+  var btnHtml = '';
+  for (var j = 0; j < cats.length; j++) {
+    var c = cats[j];
+    var isActive = (c === 'All') ? ' active' : '';
+    btnHtml += '<button class="fbtn' + isActive + '" data-cat="' + c + '" onclick="setCat(this)">' + c + '</button>';
+  }
+  document.getElementById('catFilters').innerHTML = btnHtml;
+
+  // Search listener
+  document.getElementById('searchInput').addEventListener('input', function() {
+    searchTerm = this.value.toLowerCase();
+    document.getElementById('searchClear').style.display = searchTerm ? 'block' : 'none';
+    renderCards();
+  });
+
+  // Render all articles on load
+  renderCards();
+}
+
+// ── SET CATEGORY ──
+function setCat(btn) {
+  activeCategory = btn.getAttribute('data-cat');
+  var btns = document.querySelectorAll('.fbtn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+  renderCards();
+}
+
+// ── CLEAR SEARCH ──
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('searchClear').style.display = 'none';
+  searchTerm = '';
+  renderCards();
+}
+
+// ── RESET ALL ──
+function resetAll() {
+  clearSearch();
+  activeCategory = 'All';
+  document.getElementById('cityFilter').value = '';
+  document.getElementById('sortSelect').value = 'default';
+  var btns = document.querySelectorAll('.fbtn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle('active', i === 0);
+  }
+  renderCards();
+}
+
+// ── RENDER ──
+function renderCards() {
+  var cityVal = document.getElementById('cityFilter').value;
+  var sortVal = document.getElementById('sortSelect').value;
+
+  // Filter
+  var filtered = [];
+  for (var i = 0; i < BLOG_REGISTRY.length; i++) {
+    var b = BLOG_REGISTRY[i];
+    var matchCat = (activeCategory === 'All') || (b.category === activeCategory);
+    var matchCity = !cityVal ||
+      b.title.toLowerCase().indexOf(cityVal.toLowerCase()) > -1 ||
+      b.file.toLowerCase().indexOf(cityVal.toLowerCase()) > -1;
+    var matchSearch = !searchTerm ||
+      b.title.toLowerCase().indexOf(searchTerm) > -1 ||
+      b.excerpt.toLowerCase().indexOf(searchTerm) > -1 ||
+      b.category.toLowerCase().indexOf(searchTerm) > -1 ||
+      b.file.toLowerCase().indexOf(searchTerm) > -1;
+    if (matchCat && matchCity && matchSearch) filtered.push(b);
+  }
+
+  // Sort
+  if (sortVal === 'az') filtered.sort(function(a,b){ return a.title < b.title ? -1 : 1; });
+  else if (sortVal === 'za') filtered.sort(function(a,b){ return a.title > b.title ? -1 : 1; });
+  else if (sortVal === 'cat') filtered.sort(function(a,b){ return a.category < b.category ? -1 : 1; });
+
+  // Update counts
+  document.getElementById('showingCount').textContent = filtered.length;
+  var info = document.getElementById('resInfo');
+  if (searchTerm || activeCategory !== 'All' || cityVal) {
+    info.innerHTML = 'Showing <strong>' + filtered.length + '</strong> of <strong>' + BLOG_REGISTRY.length + '</strong> articles';
+  } else {
+    info.innerHTML = 'All <strong>' + filtered.length + '</strong> articles';
+  }
+
+  var grid = document.getElementById('blogGrid');
+  var empty = document.getElementById('emptyState');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  // Build cards HTML
+  var html = '';
+  for (var k = 0; k < filtered.length; k++) {
+    var b = filtered[k];
+    html += '<a href="' + b.file + '" class="card">' +
+      '<div class="c-top">' +
+        '<span class="c-cat">' + b.category + '</span>' +
+        '<h2>' + b.title + '</h2>' +
+      '</div>' +
+      '<div class="c-body">' +
+        '<div class="c-meta">📅 ' + b.date + ' &nbsp;|&nbsp; ⏱ ' + b.readTime + '</div>' +
+        '<p class="c-excerpt">' + b.excerpt + '</p>' +
+        '<span class="c-btn">Read Article →</span>' +
+      '</div>' +
+    '</a>';
+  }
+  grid.innerHTML = html;
+}
+
+// ── START ──
+window.onload = function() { init(); };
+</script>
+
+</body>
+</html>
