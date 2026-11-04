@@ -488,5 +488,34 @@ function render() {
 
 window.onload = init;
 </script>
+    <ul id="blog-list">
+    <!-- Automated posts will populate here -->
+</ul>
+
+<script>
+async function loadBlogPosts() {
+    const repo = "kunalChhabra-ai/kunalchhabra-ai.github.io";
+    const response = await fetch(`https://api.github.com/repos/${repo}/contents/blogs`);
+    const files = await response.json();
+    
+    const blogList = document.getElementById('blog-list');
+    blogList.innerHTML = ''; // Clear fallback content
+
+    // Filter HTML files and display them
+    files.filter(file => file.name.endsWith('.html')).reverse().forEach(file => {
+        const titleFormatted = file.name
+            .replace(/\d{4}-\d{2}-\d{2}-/, '') // Remove date prefix
+            .replace('.html', '')
+            .replace(/-/g, ' ')
+            .toUpperCase();
+
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="blogs/${file.name}">${titleFormatted}</a>`;
+        blogList.appendChild(listItem);
+    });
+}
+
+loadBlogPosts();
+</script>
 </body>
 </html>
