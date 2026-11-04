@@ -103,7 +103,7 @@
 <div class="hero">
   <div class="hi">
     <h1>CA Knowledge Hub</h1>
-    <p>215+ expert articles on GST, Income Tax, Company Registration, Audit and Compliance &mdash; by CA Kunal Chhabra FCA, ICAI Member.</p>
+    <p>Expert articles on GST, Income Tax, Company Registration, Audit and Compliance &mdash; by CA Kunal Chhabra FCA, ICAI Member.</p>
     <div class="hstats">
       <div class="hs"><div class="hs-n" id="tc">215</div><div class="hs-l">Total Articles</div></div>
       <div class="hs"><div class="hs-n" id="sc">215</div><div class="hs-l">Showing</div></div>
@@ -394,31 +394,146 @@ const BLOG_REGISTRY = [
   {id:215,file:"/blogs/income-tax-return-filing-india.html",title:"Income Tax Return (ITR) Filing in India — Complete Guide for FY 2024-25",category:"Income Tax",date:"March 2025",readTime:"8 min read",excerpt:"Complete guide to Income Tax Return filing in India for FY 2024-25. Which ITR form, documents needed, deadlines, new vs old tax regime and common mistakes by CA Kunal Chhabra FCA."}
 ];
 
+// ═══════════════════════════════════════════════════════════
+//  AUTO-UPDATE ENGINE
+//  Any .html file uploaded to the /blogs/ folder on GitHub is
+//  detected automatically on page load and added to this list.
+//  Title, category, date and summary are read from the article
+//  page itself (h1, .cat-badge, .hero-meta, meta description).
+// ═══════════════════════════════════════════════════════════
+var REPO = 'kunalChhabra-ai/kunalchhabra-ai.github.io';
+var CACHE_KEY = 'ckBlogAuto1';
+var CACHE_TTL = 12 * 60 * 60 * 1000;
+
 var activeCategory = 'All';
 var searchTerm = '';
+var ALL = BLOG_REGISTRY.slice();
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function fname(path) { return path.split('/').pop().toLowerCase(); }
+function slugTitle(n) {
+  return n.replace(/\.html$/i, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ')
+          .replace(/\b\w/g, function(ch) { return ch.toUpperCase(); });
+}
+function guessCat(n) {
+  n = n.toLowerCase();
+  if (/gst/.test(n)) return 'GST';
+  if (/itr|income-tax|tds|capital-gain/.test(n)) return 'Income Tax';
+  if (/audit/.test(n)) return 'Audit';
+  if (/certificate/.test(n)) return 'CA Certificates';
+  if (/mca|roc|din|annual-compliance/.test(n)) return 'MCA Compliance';
+  if (/llp|opc|company|pvt|private-limited|partnership/.test(n)) return 'Company Registration';
+  if (/registration|license|msme|fssai|iec|trademark/.test(n)) return 'Registrations';
+  return 'Tax Advisory';
+}
+function readCache() {
+  try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; } catch (e) { return {}; }
+}
+function writeCache(o) {
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify(o)); } catch (e) {}
+}
+
+// Read title / category / date / summary from the article page itself
+function loadMeta(name) {
+  return fetch('/blogs/' + name).then(function(r) {
+    if (!r.ok) throw new Error('missing');
+    return r.text();
+  }).then(function(t) {
+    var d = new DOMParser().parseFromString(t, 'text/html');
+    var h1 = d.querySelector('h1');
+    var title = ((h1 && h1.textContent) || d.title || slugTitle(name)).replace(/\s*\|\s*CA Kunal Chhabra\s*$/i, '').trim();
+    var md = d.querySelector('meta[name="description"]');
+    var cb = d.querySelector('.cat-badge');
+    var hm = d.querySelector('.hero-meta');
+    var mt = hm ? hm.textContent : '';
+    var dm = mt.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{1,2},\s*)?\d{4}/);
+    var rm = mt.match(/(\d+)\s*min read/);
+    return {
+      file: '/blogs/' + name,
+      title: title,
+      category: cb ? cb.textContent.trim() : guessCat(name),
+      date: dm ? dm[0] : 'Latest',
+      readTime: rm ? rm[0] : '5 min read',
+      excerpt: md ? md.getAttribute('content') : 'Read this article by CA Kunal Chhabra, FCA.',
+      t: Date.now()
+    };
+  }).catch(function() {
+    return {
+      file: '/blogs/' + name, title: slugTitle(name), category: guessCat(name),
+      date: 'Latest', readTime: '5 min read',
+      excerpt: 'Read this article by CA Kunal Chhabra, FCA.', t: Date.now()
+    };
+  });
+}
+
+function setAuto(list) {
+  ALL = list.concat(BLOG_REGISTRY);   // newest uploads appear first
+  document.getElementById('tc').textContent = ALL.length;
+  buildCats();
+  render();
+}
+
+function discover() {
+  var known = {};
+  for (var i = 0; i < BLOG_REGISTRY.length; i++) known[fname(BLOG_REGISTRY[i].file)] = 1;
+
+  // 1) show anything remembered from earlier visits straight away
+  var cache = readCache();
+  var cached = [];
+  for (var k in cache) { if (!known[k]) cached.push(cache[k]); }
+  if (cached.length) setAuto(cached.reverse());
+
+  // 2) ask GitHub which files are in /blogs/ right now
+  fetch('https://api.github.com/repos/' + REPO + '/contents/blogs')
+    .then(function(r) { if (!r.ok) throw new Error('api'); return r.json(); })
+    .then(function(files) {
+      var names = [];
+      for (var j = 0; j < files.length; j++) {
+        var f = files[j], n = f.name.toLowerCase();
+        if (f.type === 'file' && /\.html$/.test(n) && n !== 'index.html' && !known[n]) names.push(f.name);
+      }
+      if (!names.length) { if (cached.length) { writeCache({}); setAuto([]); } return; }
+      return Promise.all(names.map(function(n) {
+        var key = n.toLowerCase();
+        var hit = cache[key];
+        if (hit && (Date.now() - hit.t) < CACHE_TTL) return hit;
+        return loadMeta(n);
+      })).then(function(list) {
+        var fresh = {};
+        for (var m = 0; m < names.length; m++) fresh[names[m].toLowerCase()] = list[m];
+        writeCache(fresh);
+        setAuto(list.reverse());
+      });
+    })
+    .catch(function() { /* offline or rate-limited: keep what is already showing */ });
+}
 
 function init() {
-  document.getElementById('tc').textContent = BLOG_REGISTRY.length;
-  document.getElementById('sc').textContent = BLOG_REGISTRY.length;
-
-  var cats = ['All'], seen = {};
-  for (var i = 0; i < BLOG_REGISTRY.length; i++) {
-    var c = BLOG_REGISTRY[i].category;
-    if (!seen[c]) { seen[c] = true; cats.push(c); }
-  }
-  var h = '';
-  for (var j = 0; j < cats.length; j++) {
-    h += '<button class="fbtn' + (cats[j]==='All'?' active':'') + '" data-cat="' + cats[j] + '" onclick="setCat(this)">' + cats[j] + '</button>';
-  }
-  document.getElementById('cf').innerHTML = h;
-
+  document.getElementById('tc').textContent = ALL.length;
+  document.getElementById('sc').textContent = ALL.length;
+  buildCats();
   document.getElementById('si').addEventListener('input', function() {
     searchTerm = this.value.toLowerCase();
     document.getElementById('sc2').style.display = searchTerm ? 'block' : 'none';
     render();
   });
-
   render();
+  discover();
+}
+
+function buildCats() {
+  var cats = ['All'], seen = {};
+  for (var i = 0; i < ALL.length; i++) {
+    var c = ALL[i].category;
+    if (!seen[c]) { seen[c] = true; cats.push(c); }
+  }
+  var h = '';
+  for (var j = 0; j < cats.length; j++) {
+    h += '<button class="fbtn' + (cats[j] === activeCategory ? ' active' : '') + '" data-cat="' + esc(cats[j]) + '" onclick="setCat(this)">' + esc(cats[j]) + '</button>';
+  }
+  document.getElementById('cf').innerHTML = h;
 }
 
 function setCat(btn) {
@@ -441,8 +556,7 @@ function resetAll() {
   activeCategory = 'All';
   document.getElementById('city').value = '';
   document.getElementById('sort').value = 'default';
-  var btns = document.querySelectorAll('.fbtn');
-  for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', i===0);
+  buildCats();
   render();
 }
 
@@ -451,71 +565,40 @@ function render() {
   var sort = document.getElementById('sort').value;
   var out = [];
 
-  for (var i = 0; i < BLOG_REGISTRY.length; i++) {
-    var b = BLOG_REGISTRY[i];
+  for (var i = 0; i < ALL.length; i++) {
+    var b = ALL[i];
     var mc = (activeCategory === 'All') || (b.category === activeCategory);
     var mci = !city || b.title.toLowerCase().indexOf(city.toLowerCase()) > -1 || b.file.toLowerCase().indexOf(city.toLowerCase()) > -1;
     var ms = !searchTerm || b.title.toLowerCase().indexOf(searchTerm) > -1 || b.excerpt.toLowerCase().indexOf(searchTerm) > -1 || b.category.toLowerCase().indexOf(searchTerm) > -1;
     if (mc && mci && ms) out.push(b);
   }
 
-  if (sort === 'az') out.sort(function(a,b){ return a.title < b.title ? -1 : 1; });
-  else if (sort === 'za') out.sort(function(a,b){ return a.title > b.title ? -1 : 1; });
-  else if (sort === 'cat') out.sort(function(a,b){ return a.category < b.category ? -1 : 1; });
+  if (sort === 'az') out.sort(function(a, b) { return a.title < b.title ? -1 : 1; });
+  else if (sort === 'za') out.sort(function(a, b) { return a.title > b.title ? -1 : 1; });
+  else if (sort === 'cat') out.sort(function(a, b) { return a.category < b.category ? -1 : 1; });
 
   document.getElementById('sc').textContent = out.length;
-  var info = document.getElementById('ri');
-  info.innerHTML = (searchTerm || activeCategory !== 'All' || city)
-    ? 'Showing <strong>' + out.length + '</strong> of <strong>' + BLOG_REGISTRY.length + '</strong> articles'
+  document.getElementById('ri').innerHTML = (searchTerm || activeCategory !== 'All' || city)
+    ? 'Showing <strong>' + out.length + '</strong> of <strong>' + ALL.length + '</strong> articles'
     : 'All <strong>' + out.length + '</strong> articles';
 
   var grid = document.getElementById('grid');
   var empty = document.getElementById('empty');
-
   if (out.length === 0) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
 
   var html = '';
   for (var k = 0; k < out.length; k++) {
-    var b = out[k];
-    html += '<a href="' + b.file + '" class="card">'
-      + '<div class="ct"><span class="cc">' + b.category + '</span><h2>' + b.title + '</h2></div>'
-      + '<div class="cb"><div class="cm">' + b.date + ' &nbsp;|&nbsp; ' + b.readTime + '</div>'
-      + '<p class="ce">' + b.excerpt + '</p><span class="cbtn">Read Article &rarr;</span></div></a>';
+    var a = out[k];
+    html += '<a href="' + esc(a.file) + '" class="card">'
+      + '<div class="ct"><span class="cc">' + esc(a.category) + '</span><h2>' + esc(a.title) + '</h2></div>'
+      + '<div class="cb"><div class="cm">' + esc(a.date) + ' &nbsp;|&nbsp; ' + esc(a.readTime) + '</div>'
+      + '<p class="ce">' + esc(a.excerpt) + '</p><span class="cbtn">Read Article &rarr;</span></div></a>';
   }
   grid.innerHTML = html;
 }
 
 window.onload = init;
-</script>
-    <ul id="blog-list">
-    <!-- Automated posts will populate here -->
-</ul>
-
-<script>
-async function loadBlogPosts() {
-    const repo = "kunalChhabra-ai/kunalchhabra-ai.github.io";
-    const response = await fetch(`https://api.github.com/repos/${repo}/contents/blogs`);
-    const files = await response.json();
-    
-    const blogList = document.getElementById('blog-list');
-    blogList.innerHTML = ''; // Clear fallback content
-
-    // Filter HTML files and display them
-    files.filter(file => file.name.endsWith('.html')).reverse().forEach(file => {
-        const titleFormatted = file.name
-            .replace(/\d{4}-\d{2}-\d{2}-/, '') // Remove date prefix
-            .replace('.html', '')
-            .replace(/-/g, ' ')
-            .toUpperCase();
-
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="blogs/${file.name}">${titleFormatted}</a>`;
-        blogList.appendChild(listItem);
-    });
-}
-
-loadBlogPosts();
 </script>
 </body>
 </html>
